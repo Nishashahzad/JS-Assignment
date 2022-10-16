@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS program to get current date</title>
+</head>
+<body>
+    <h>JS program to get current date</h>
+    <p id="demo"></p>
+    <script>
+        var today = new Date();
+        var date = today.getDate()+ "-" +(today.getMonth()+1)+ "-" +today.getFullYear();
+        var Date = date;
+        document.getElementById("demo").innerHTML=date;
+    </script>
+</body>
+</html>

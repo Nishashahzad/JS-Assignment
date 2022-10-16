@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Write a JavaScript program to calculate days left until next Christmas.</title>
+</head>
+<body>
+    <script>
+let today = new Date();
+let christmasYear = today.getFullYear();
+if (today.getMonth == 11 &&
+today.getDate > 25 ) {
+    christmasYear = christmasYear + 1 ;
+}
+let christmasDate =
+new Date(christmasYear, 11, 25);
+    let dayMilliSeconds =  
+    1000 * 60 * 60 * 24;
+    let remainingDays = Math.ceil(
+        (christmasDate.getTime()-today.getTime())/(dayMilliSeconds)
+);
+document.write("There are" + remainingDays +
+ "days remaining until christmas.");
+</script>
+</body>
+</html>
